@@ -1,12 +1,12 @@
 /*
 COLORS:
 Gainsboro:                #DCDCDD
-Lavender Grey:            #C5C3C6
+Lavender-Grey:            #C5C3C6
 Outer Space:              #46494C
 Deep Space Sparkle:       #4C5C68
 CG Blue:                  #1985A1
 Light Greyish:            #cccccc
-Dark Grey Background:     rgba(70, 73, 77, 0.8)
+Dark-Grey Background:     rgba(70, 73, 77, 0.8)
 */
 
 /* Header */
@@ -14,7 +14,7 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 #header-container {
   height: 100vh;
   background-color: #C5C3C6;
-  display: flex;
+  /*display: flex; */
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
@@ -23,26 +23,33 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 }
 
 #logo {
-  margin: 10% auto 0 auto;
+  margin: 5% auto 0 auto;
   width: 115px;
   transition: 0.3s;
 }
 
-#header-title:hover{cursor: default; color: #ffffff;}
+#header-title:hover{cursor: default; color: #cdcdcd;}
 #header-title {
   margin: 0;
-  padding: 0;
+  padding: 10% 10%;
   text-align: center;
   font-family: "Poiret One";
-  font-size: 32px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.80);
   transition: 0.3s;
+}
+
+#menu-icon-wrapper {
+  text-align: center;
+  margin: auto;
+  padding: 20vh 0px;
+  display: inline-block;
 }
 
 #menu-icon {
   margin: 0 auto;
   width: 200px;
   height: 50px;
+  margin: 5% 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +82,9 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 }
 
 #menu-nav {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0px;
   height: 0vh;
   display: flex;
   margin: 0;
@@ -83,7 +93,7 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
   width: 100%;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
   background: #C5C3C6;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
 #menu-nav ul {
@@ -147,18 +157,22 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
 
   /* Header */
+  #header {
+    background: black;
+  }
+
   #header-container {
-    background-image: url("../images/banner-03.png");
-    background-size: cover;
+    background-image: url("../images/banner-02.png");
+    background-size: auto;
     color: #46494C;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
   }
 
   #header-title {
-    font-size: 45px;
+    font-size: 64px;
   }
 
   #logo {
@@ -205,7 +219,7 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 @media (min-width: 1000px) {
 
   #header-title{
-    font-size: 64px;
+    font-size: 72px;
   }
 
   #menu-icon {
