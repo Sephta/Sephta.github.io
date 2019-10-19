@@ -1,0 +1,71 @@
+/*
+COLORS:
+Gainsboro:                #DCDCDD
+Lavender Grey:            #C5C3C6
+Outer Space:              #46494C
+Deep Space Sparkle:       #4C5C68
+CG Blue:                  #1985A1
+Light Greyish:            #cccccc
+Dark Grey Background:     rgba(70, 73, 77, 0.8)
+*/
+
+#about {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Noto Sans";
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.infoBlock {
+  text-align: center;
+  margin: 20px 20px;
+  width: auto;
+  height: 25vh;
+  border: 2px solid #46494C;
+  border-radius: 2em 2em 2em 2em;
+  background-color: rgba(197, 195, 198, 0.8);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.infoImg {
+  width: 60px;
+  height: auto;
+  margin: 5px;
+  display: block;
+  float: left;
+}
+
+.infoBlock p {
+  margin: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+
+  /* Media Queries */
+/* ============================== */
+
+@media (min-width: 500px) {
+
+  #about {
+    background-image: url("../images/stock-img-04.jpg");
+    background-size: cover;
+    font-size: 24px;
+  }
+
+  .infoBlock {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .infoImg {
+    margin: 20px;
+    width: 100px;
+  }
+
+}

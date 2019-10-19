@@ -1,0 +1,19 @@
+/*
+COLORS:
+Gainsboro:                #DCDCDD
+Lavender Grey:            #C5C3C6
+Outer Space:              #46494C
+Deep Space Sparkle:       #4C5C68
+CG Blue:                  #1985A1
+Light Greyish:            #cccccc
+Dark Grey Background:     rgba(70, 73, 77, 0.8)
+*/
+
+/* GLOBAL ATTRIBUTES */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
