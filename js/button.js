@@ -1,6 +1,7 @@
 function openNav() {
   document.getElementById('menu-nav').style.height = "10vh";
   document.getElementById('menu-close').style.height = "auto";
+  document.getElementById('menu-icon').style.content = "hidden";
 }
 
 function closeNav() {

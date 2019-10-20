@@ -9,6 +9,11 @@ Light Greyish:            #cccccc
 Dark Grey Background:     rgba(70, 73, 77, 0.8)
 */
 
+$bg-color: #46494C;
+$dot-color: #cccccc;
+$dot-space: 22px;
+$dot-size: 2px;
+
 #about {
   margin: 0;
   padding: 0;
@@ -20,11 +25,12 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
   font-family: "Noto Sans";
   font-size: 12px;
   transition: 0.3s;
+  // overflow: hidden;
 }
 
 .infoBlock {
   text-align: center;
-  margin: 20px 20px;
+  margin: 20px;
   width: auto;
   height: 25vh;
   border: 2px solid #46494C;
@@ -54,7 +60,7 @@ Dark Grey Background:     rgba(70, 73, 77, 0.8)
 @media (min-width: 500px) {
 
   #about {
-    background-image: url("../images/stock-img-04.jpg");
+    // background-image: url("../images/mac01.jpg");
     background-size: cover;
     font-size: 24px;
   }
