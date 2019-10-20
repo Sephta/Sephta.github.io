@@ -14,7 +14,12 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
 #header-container {
   height: 100vh;
   background-color: #C5C3C6;
-  /*display: flex; */
+  /* testing out different styling methods here...
+  display: flex;
+  border: 10px solid;
+  border-radius: 1em 1em 0 0;
+  */
+  box-shadow: inset 0 0 100px #000;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
@@ -70,6 +75,13 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   color: #ffffff;
   background: rgba(153, 153, 153, 0.8);
   border-color: #ffffff;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.60);
+  margin-top: -5px;
+}
+
+#menu-icon:active {
+  margin-top: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
 }
 
 .highlight:hover {color: #fff;}
@@ -104,9 +116,8 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   color: #ffffff;
 }
 
-#menu-close:hover {color: #cccccc;}
 #menu-close {
-  padding: 0 10px;
+  padding: 0 100px 0 10px;
   float: left;
   width: 2px;
   height: 0;
@@ -114,6 +125,13 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   font-size: 1.5em;
   transition: 0.3s;
   display: inline-block;
+}
+
+#menu-close:hover {
+  color: black;
+  font-size: 2em;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  font: bold;
 }
 
 .menuButton:hover{
@@ -159,9 +177,6 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
 @media (min-width: 650px) {
 
   /* Header */
-  #header {
-    background: black;
-  }
 
   #header-container {
     background-image: url("../images/banner-02.png");
