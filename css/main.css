@@ -26,4 +26,11 @@ html, body {
   width: 100%;
   height: 100%;
   background: #46494C;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Poiret One";
+  font-size: 24pt;
+  color: white;
 }

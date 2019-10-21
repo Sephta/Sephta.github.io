@@ -9,7 +9,8 @@ Light Greyish:            #cccccc
 Dark-Grey Background:     rgba(70, 73, 77, 0.8)
 */
 
-/* Header */
+
+/*--------------------------------------------- HEADER ------------------------------------------*/
 
 #header-container {
   height: 100vh;
@@ -27,13 +28,16 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   overflow: hidden;
 }
 
+
+/* Logo */
 #logo {
   margin: 5% auto 0 auto;
   width: 115px;
   transition: 0.3s;
 }
 
-#header-title:hover{cursor: default; color: #cdcdcd;}
+
+/* Header Title */
 #header-title {
   margin: 0;
   padding: 10% 10%;
@@ -43,6 +47,23 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   transition: 0.3s;
 }
 
+#header-title:hover{
+  cursor: default; color: #cdcdcd;
+}
+
+.highlight {
+  width: inherit;
+  height: inherit;
+  color: #C5C3C6;
+  transition: 0.3s;
+}
+
+.highlight:hover {
+  color: #fff;
+}
+
+
+/* Menu ~ Icon */
 #menu-icon-wrapper {
   text-align: center;
   margin: auto;
@@ -58,10 +79,14 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   align-items: center;
   justify-content: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-  transition: 0.5s;
+  transition: all 250ms ease-in-out;
   border: 2px solid #999999;
   border-radius: 2em 2em;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
+}
+
+#menu-icon.slideRight {
+  margin-left: 500px;
 }
 
 #menu-icon h3 {
@@ -84,14 +109,8 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
 }
 
-.highlight:hover {color: #fff;}
-.highlight {
-  width: inherit;
-  height: inherit;
-  color: #C5C3C6;
-  transition: 0.3s;
-}
 
+/* Menu ~ Navigation */
 #menu-nav {
   position: absolute;
   overflow: hidden;
@@ -116,8 +135,8 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   color: #ffffff;
 }
 
+/* Close Button */
 #menu-close {
-  padding: 0 100px 0 10px;
   float: left;
   width: 2px;
   height: 0;
@@ -134,32 +153,43 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   font: bold;
 }
 
-.menuButton:hover{
-  cursor: pointer;
-  color: #ffffff;
-  border-color: #ffffff;
-  background: rgba(153, 153, 153, 0.8);
-  transition: 0.3s;
-}
-
 .menuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 5px;
   border: 2px solid #999999;
   border-radius: 1em 1em;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
   float: left;
-  padding: 0 10px;
   transition: 0.3s;
 }
 
+.menuButton:hover{
+  cursor: pointer;
+  color: #ffffff;
+  background: rgba(153, 153, 153, 0.8);
+  border-color: #ffffff;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.60);
+  margin-top: -5px;
+}
+
+.menuButton:active {
+  margin-top: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
+}
+
 .pageLink {
+  font-size: 14pt;
   color: inherit;
   text-decoration: none;
+  transition: all 350ms ease-in-out;
 }
 
 
-/* MEDIA QUERIES */
+/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
 
+/* From 400px to 650px */
 @media (min-width: 400px) {
 
   /* Header */
@@ -168,16 +198,25 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
   }
 
   /* Nav Menu */
-  #menu-nav ul li {
+  #menu-close {
+    padding: 0 50px 0 10px;
+  }
+
+  .menuButton {
+    margin: 1em;
+  }
+
+  .pageLink {
     padding: 3px 15px;
   }
 
 }
 
+
+/* From 650px to 1000px */
 @media (min-width: 650px) {
 
   /* Header */
-
   #header-container {
     background-image: url("../images/banner-02.png");
     background-size: auto;
@@ -189,10 +228,18 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
     font-size: 64px;
   }
 
+  .highlight {
+    color: #1985A1;
+  }
+
+
+  /* Logo */
   #logo {
     width: 150px;
   }
 
+
+  /* Menu ~ Icon */
   #menu-icon {
     border: 2px solid #46494C;
     border-radius: 2em 2em;
@@ -206,34 +253,53 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
     color: #cccccc;
   }
 
-  /* Navbar */
 
-  .highlight {color: #1985A1;}
-
+  /* Menu ~ Navigation */
   #menu-nav {
     background: rgba(227, 227, 227, 0.8);
     font-size: 16px;
   }
 
-  #menu-nav ul li:hover {color: #cccccc;}
   #menu-nav ul li {
-    padding: 5px 25px;
     border-color: #46494C;
     color: #46494C;
   }
 
-  .menuButton:hover {background-color: rgba(70, 73, 77, 0.8);}
+  #menu-nav ul li:hover {
+    color: #cccccc;
+  }
+
+  #menu-close {
+    padding: 0 75px 0 10px;
+  }
+
   .menuButton {
-    padding: 0 25px;
-    margin: 0 1em;
+    margin: 0 2em;
+  }
+
+  .menuButton:hover {
+    background-color: rgba(70, 73, 77, 0.8);
+  }
+
+  .pageLink {
+    padding: 4px 20px;
   }
 
 }
 
+
+/* From 1000px to etc */
 @media (min-width: 1000px) {
 
+  /* Header */
   #header-title{
     font-size: 72px;
+  }
+
+
+  /* Menu ~ Icon */
+  #menu-icon-wrapper {
+    padding-top: 1em;
   }
 
   #menu-icon {
@@ -242,17 +308,22 @@ Dark-Grey Background:     rgba(70, 73, 77, 0.8)
     height: 75px;
   }
 
-  /* Navbar */
+
+  /* Menu ~ Navigation */
   #menu-nav {
     font-size: 18px;
   }
 
-  #menu-nav ul li {
-    padding: 6px 30px;
+  #menu-close {
+    padding: 0 100px 0 10px;
   }
 
   .menuButton {
     margin: 0 3.5em;
+  }
+
+  .pageLink {
+    padding: 6px 30px;
   }
 
 }
