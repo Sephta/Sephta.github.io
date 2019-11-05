@@ -1,36 +1,21 @@
 /*
-COLORS:
-Gainsboro:                #DCDCDD
-Lavender Grey:            #C5C3C6
-Outer Space:              #46494C
-Deep Space Sparkle:       #4C5C68
-CG Blue:                  #1985A1
-Light Greyish:            #cccccc
-Dark Grey Background:     rgba(70, 73, 77, 0.8)
+Seth Tal
 */
 
-/* GLOBAL ATTRIBUTES */
-
-html, body {
-  /* user-select code bellow not mine, Credit to StackOverflow user: Blowsie */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-  /* Bellow is my own code... */
+  /* GLOBAL ATTRIBUTES */
+/* ========================================================================== */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #46494C;
-  scroll-behavior: smooth;
+  transition: 250ms ease-in-out;
+  font-family: "Poiret One";
+  color: #444452;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Poiret One";
-  font-size: 24pt;
-  color: white;
+html, body {
+
+  background: #FBFBFB;
+  scroll-behavior: smooth;
 }

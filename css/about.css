@@ -1,77 +1,185 @@
 /*
-COLORS:
-Gainsboro:                #DCDCDD
-Lavender Grey:            #C5C3C6
-Outer Space:              #46494C
-Deep Space Sparkle:       #4C5C68
-CG Blue:                  #1985A1
-Light Greyish:            #cccccc
-Dark Grey Background:     rgba(70, 73, 77, 0.8)
+Seth Tal
 */
 
-$bg-color: #46494C;
-$dot-color: #cccccc;
-$dot-space: 22px;
-$dot-size: 2px;
 
-#about {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  font-family: "Noto Sans";
-  font-size: 12px;
-  transition: 0.3s;
-  // overflow: hidden;
+  /* ABOUT PROPERTIES */
+/* ========================================================================== */
+
+#about-container {
+  margin: 0em 5em 1em 5em;
+  padding-top: 10em;
+
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-row-gap: 5em;
 }
 
-.infoBlock {
-  text-align: center;
-  margin: 20px;
+  /* Special Profile and text divs */
+/* ================================== */
+#profile {
+  grid-column-start: span 1;
+  justify-self: end;
+}
+
+#profile img {
   width: auto;
-  height: 25vh;
-  border: 2px solid #46494C;
-  border-radius: 2em 2em 2em 2em;
-  background-color: rgba(197, 195, 198, 0.8);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.infoImg {
-  width: 60px;
-  height: auto;
-  margin: 5px;
-  display: block;
+  height: 100px;
   float: left;
 }
 
-.infoBlock p {
-  margin: 20px;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  display: block;
+#profile p {
+  text-align: left;
+
+  font-size: 2em;
+  font-family: "Noto Sans";
 }
 
-  /* Media Queries */
-/* ============================== */
+#profile-text {
+  display: table;
+  margin-left: 1em;
+  grid-column-start: span 2;
 
-@media (min-width: 500px) {
+  justify-self: center;
 
-  #about {
-    // background-image: url("../images/mac01.jpg");
-    background-size: cover;
-    font-size: 24px;
+  text-align: left;
+}
+
+#profile-text table {
+  margin: 0;
+
+  border-spacing: 10px;
+}
+
+#profile-text table th {
+  width: 25%;
+
+  text-align: center;
+  padding: 5px;
+  border-bottom: 3px solid #A3A8B1;
+  border-right: 3px solid #A3A8B1;
+
+  font-size: 2.25em;
+}
+
+#profile-text table td {
+  width: 25%;
+
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #AA605C;
+  border-radius: 0 0 0 0;
+
+  font-size: 1.5em;
+}
+
+#profile-text table td:nth-child(3) {
+  border-bottom: none !important;
+}
+
+#profile-text table td:nth-child(4) {
+  border-bottom: none !important;
+}
+
+#profile-text table * {
+  border-radius: 0.25em 0.25em 0.25em 0.25em;
+
+  text-align: center;
+  font-family: "Noto Sans";
+}
+
+#proficiency {
+  font-size: 2em;
+}
+
+.proficiency {
+  border-bottom: none !important;
+}
+
+#projects-link {
+  padding-top: 1.25em;
+
+  font-size: 3em;
+  font-family: "Noto Sans";
+  text-align: center;
+}
+
+  /* Showcase Divs */
+/* ================================== */
+.showcase {
+  height: 350px;
+
+  background: grey;
+  grid-column-start: span 1;
+}
+
+.showcaseText {
+  background: lightgrey;
+  grid-column-start: span 2;
+}
+
+.showcase:nth-of-type(even) {
+  margin-left: 1em;
+}
+
+.showcaseText:nth-of-type(even) {
+  margin-left: 1em;
+}
+
+
+  /* MEDIA QUERIES */
+/* ========================================================================== */
+
+@media only screen and (max-width: 1000px) {
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 10em 0 0 0;
   }
 
-  .infoBlock {
-    background-color: rgba(255, 255, 255, 0.4);
+  #about-container .showcase {
+    margin: 3em 0 3em 0;
   }
 
-  .infoImg {
-    margin: 20px;
+  #about-container .showcaseText:nth-child(odd) {
+    margin: 3em 0 0em 0;
+  }
+
+  #profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #profile img {
     width: 100px;
+    display: none;
   }
 
+  #profile-text {
+    margin-left: 0;
+  }
+
+  #profile-text table {
+    margin: auto;
+    width: inherit !important;
+
+  }
+
+  #profile-text table td:nth-child(even) {
+    border-left: 3px solid #AA605C;
+    border-bottom: none;
+  }
+
+  .showcase:nth-of-type(even) {
+    margin-left: 0;
+  }
+
+  .showcaseText:nth-of-type(even) {
+    margin-left: 0;
+  }
 }

@@ -14,7 +14,9 @@
   <meta name="description" content="A Creative Student's Portfolio">
   <meta name="keywords" content="web design, affordable web design, professional web design,
     responsive web design, front-end developer portfolio, professional web developer portfolio,
-    student web developer portfolio, game developer, student portfolio, unity game engine">
+    student web developer portfolio, game developer, student portfolio, unity game engine,
+    video game design, student game developer, game dev, software engineer, software design,
+    3D game development, 2D game development, 2d, 3d, 2D, 3D">
 
 
   <!-- TITLE -->
@@ -30,98 +32,151 @@
   <link rel="stylesheet" href="./css/about.css">
 
   <!-- JS File Links -->
-  <script src="./js/button.js" charset="utf-8"></script>
-
+  <!-- <script src="./js/main.js" charset="utf-8"></script> -->
 
   <!-- COLORS -->
-  <!-- Gainsboro:                #DCDCDD -->
-  <!-- Lavender Grey:            #C5C3C6 -->
-  <!-- Outer Space:              #46494C -->
-  <!-- Deep Space Sparkle:       #4C5C68 -->
-  <!-- CG Blue:                  #1985A1 -->
-  <!-- Light Greyish:            #cccccc -->
-  <!-- Dark Grey Border:         rgba(70, 73, 77, 0.8) -->
+  <!-- Grey Nurse:               #FBFBFB -->
+  <!-- Grey Chateau:             #A3A8B1 -->
+  <!-- Burnt Sienna:             #F25F5C -->
+  <!-- Matrix:                   #AA605C -->
+  <!-- Ship Grey:                #484351 -->
 
 </head>
 
-  <body>
-    <div class="container">
+  <body> <!-- BODY CONTAINER -->
+
 
 
       <!-- HEADER -->
-      <header id="header" class="header">
-        <div id="header-container" class="container">
+    <!-- =================================================================== -->
+    <div id="header-container", class="headerContainer">
 
-          <!-- Logo Img -->
-          <img id="logo" src="./images/s-logo-v2.0.png" alt="Seth T. Tal Logo" href="index">
+      <div id="project-button-container", class="projectButtonContainer">
+        <div id="project-button", class="projectButton">
+          <a id="project-button-link", class="projectButtonLink" href="#projects-link">[ Projects ]</a>
+        </div>
+      </div>
 
-          <!-- Header Title -->
-          <h1 id="header-title">Seth T. Tal <span class="highlight">|</span> Portfolio</h1>
+      <div id="header-content-container", class="headerContentContainer">
 
-          <!-- Menu Icon -->
-          <div id="menu-icon-wrapper">
-            <div id="menu-icon" class="menuIcon" onclick="openNav()"><h3>INFORMATION</h3></div>
-          </div>
+        <h1 id="nameplate", class="nameplate">Seth T. Tal <span>|</span> Portfolio</h1>
+        <!-- <img src="./images/s-logo-v2.0.png" alt=""> -->
+        <h2 id="briefing", class="briefing">
+          Hi, I'm an avid Computer Science student at the <span>University of Oregon</span>.<br>
+          My passion is designing and implementing fun and creative game systems.<br><br>
+          Built to be intuitive and engaging.
+        </h2>
 
-          <!-- Navigation menu -->
-          <nav id="menu-nav" class="nav">
-            <div id="menu-close" class="menuClose" onclick="closeNav()">&times;</div>
-            <ul id="nav-menu-ul">
-              <li class="menuButton"><a class="pageLink" href="#about">About</a></li>
-              <li class="menuButton"><a class="pageLink" href="./projects.html">Projects</a></li>
-              <li class="menuButton"><a class="pageLink" href="#footer">Contact</a></li>
-            </ul>
-          </nav>
+        <div id="about-button", class="aboutButton">
+          <a href="#about-container">V</a>
+        </div>
+      </div>
 
-        </div> <!-- Header Container End -->
-      </header>
+    </div> <!-- end of Header Container -->
+
 
 
       <!-- ABOUT -->
-      <div id="about" class="about">
+    <!-- =================================================================== -->
+    <div id="about-container", class="aboutContainer">
 
-        <div class="infoBlock">
-          <img src="./images/html5-logo.png" alt="HTML5 Logo" class="infoImg"/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eveniet libero molestiae quaerat unde, ad odit aliquid quisquam asperiores reiciendis!</p>
+        <div id="profile">
+          <p>Skills</p>
+          <img src="./images/coding-bracket.gif" alt="">
         </div>
 
-        <div class="infoBlock">
-          <img src="./images/css3-logo.png" alt="CSS3 Logo" class="infoImg"/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eveniet libero molestiae quaerat unde, ad odit aliquid quisquam asperiores reiciendis!</p>
+        <div id="profile-text">
+          <table>
+            <tr>
+              <th>Proficiency</th>
+              <th>Languages</th>
+              <!-- <th>Engines</th>
+              <th>Tools</th>
+              <th>Fields</th> -->
+            </tr>
+            <tr>
+              <td class="proficiency"><span id="proficiency">1</span></td>
+              <td>Python</td>
+              <!-- <td></td>
+              <td></td>
+              <td>Scripting</td> -->
+            </tr>
+            <tr>
+              <td class="proficiency"><span id="proficiency">2</span></td>
+              <td>C</td>
+              <!-- <td></td>
+              <td></td>
+              <td>Scripting</td> -->
+            </tr>
+            <tr>
+              <td class="proficiency"><span id="proficiency">3</span></td>
+              <td>HTML5</td>
+              <!-- <td></td>
+              <td></td>
+              <td>WebDev</td> -->
+            </tr>
+            <tr>
+              <td class="proficiency"><span id="proficiency">4</span></td>
+              <td>CSS3</td>
+              <!-- <td></td>
+              <td></td>
+              <td>WebDev</td> -->
+            </tr>
+            <tr>
+              <td class="proficiency"><span id="proficiency">5</span></td>
+              <td>JavaScript</td>
+              <!-- <td></td>
+              <td></td>
+              <td>WebDev</td> -->
+            </tr>
+          </table>
         </div>
 
-        <div class="infoBlock">
-          <img src="./images/js-logo.png" alt="JAVASCRIPT Logo" class="infoImg"/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam eveniet libero molestiae quaerat unde, ad odit aliquid quisquam asperiores reiciendis!</p>
+        <h1 id="projects-link">Projects</h1>
+        <h2> </h2>
+        <!--
+          This h2 tag is here to keep the grid in check...
+          I am so sorry for this awful use of a tag... please forgive me
+        -->
+
+        <div class="showcaseText">
+          #1:
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, neque fuga voluptates ullam nam, eligendi natus. Rem soluta molestias, rerum facere temporibus dolores. Qui, eius odio ipsam omnis. Repellendus suscipit corporis labore voluptates vitae, saepe similique, tempora omnis eius temporibus, dolor nisi assumenda odio fugiat enim hic doloremque fugit aliquam.
+        </div>
+        <div class="showcase"></div>
+
+        <div class="showcase"></div>
+        <div class="showcaseText">
+          #2:
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, neque fuga voluptates ullam nam, eligendi natus. Rem soluta molestias, rerum facere temporibus dolores. Qui, eius odio ipsam omnis. Repellendus suscipit corporis labore voluptates vitae, saepe similique, tempora omnis eius temporibus, dolor nisi assumenda odio fugiat enim hic doloremque fugit aliquam.
         </div>
 
-      </div>
+        <div class="showcaseText">
+          #3:
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, neque fuga voluptates ullam nam, eligendi natus. Rem soluta molestias, rerum facere temporibus dolores. Qui, eius odio ipsam omnis. Repellendus suscipit corporis labore voluptates vitae, saepe similique, tempora omnis eius temporibus, dolor nisi assumenda odio fugiat enim hic doloremque fugit aliquam.
+        </div>
+        <div class="showcase"></div>
+
+    </div>
 
 
-      <!-- No longer the project section, will probaly be an integrated pdf viewer for my resume?? -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae architecto aspernatur aliquid illum, culpa tempora labore officia deserunt? Ab aliquam, nostrum harum officia fuga quidem eos consectetur! Veniam, minima, dolor. Consequuntur numquam pariatur, dicta! Quis sequi, odio dolor illum harum vitae suscipit iusto velit molestiae deleniti quod quae, molestias doloremque debitis laborum. Commodi temporibus voluptatum, hic vitae libero, itaque soluta at corporis officiis necessitatibus ducimus ipsam tempora aliquid repellendus consectetur deleniti recusandae quisquam neque eaque veniam, maiores. Totam nemo deleniti odio tempore, ipsam illo molestias vitae at, ab quis molestiae dolorum cum quibusdam beatae sequi praesentium tempora architecto nostrum dicta vel nihil. Possimus rerum, soluta iure voluptate autem neque sequi consequatur alias. A sit animi cum eveniet doloremque ullam aut, ipsa, magnam totam mollitia fugiat, quidem blanditiis necessitatibus natus ducimus maxime minima. Repellendus voluptatum unde amet voluptates consequuntur aperiam deleniti facere magnam perspiciatis, doloremque maiores earum, veritatis nihil illo. Quia, necessitatibus aliquam? Quis modi quaerat debitis tenetur at similique incidunt perferendis dolor eum, eius, adipisci voluptates perspiciatis sunt obcaecati natus consectetur! Vitae tenetur, repellat quos. Minima nam voluptate error ea minus, consequatur optio quasi omnis odio rem odit vel nemo fuga maxime perspiciatis quisquam dicta. Reprehenderit amet praesentium ipsum atque sapiente. Quidem voluptatem doloribus, dicta deserunt harum aliquid vitae tempora, omnis, magnam pariatur obcaecati hic. Optio, nesciunt. Dolore, voluptatem nesciunt.</p>
 
+    <!-- FOOTER -->
+  <!-- ===================================================================== -->
+  <div id="footer-container">
 
-      <!-- CONTACT section?? -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus neque assumenda eaque, porro quam facilis vero, impedit ad nesciunt earum eos voluptatem nostrum fuga. Quasi maxime, animi deserunt dignissimos! Illum ipsum explicabo, neque quos! Dolores id, laudantium eum, consequatur cumque vitae veniam deserunt quos maiores maxime modi accusantium natus alias.</p>
+    <div id="copyright">
+      <span>Built by Seth Tal | 2019</span>
+      <span>Inspired by Joeb Rogers</span>
+    </div>
 
+    <div id="links">
+      <a href="https://github.com/Sephta">GitHub</a>
+      <a href="linkedIn">LinkedIn</a>
+      <a href="https://twitter.com/seth_tal">Twitter</a>
+    </div>
+  </div>
 
-      <!-- FOOTER -->
-      <footer id="footer" class="footer">
-        <div id="footer-container" class="container">
-
-          <!-- Footer Menu -->
-            <ul>
-              <li class="menuButton"><a href="#header">Home</a></li>
-              <li class="menuButton"><a href="#">About</a></li>
-              <li class="menuButton"><a href="#">Projects</a></li>
-            </ul>
-
-        </div> <!-- Footer Container End -->
-      </footer>
-
-
-    </div> <!-- Main Container End -->
   </body>
 
 </html>

@@ -1,329 +1,264 @@
 /*
-COLORS:
-Gainsboro:                #DCDCDD
-Lavender-Grey:            #C5C3C6
-Outer Space:              #46494C
-Deep Space Sparkle:       #4C5C68
-CG Blue:                  #1985A1
-Light Greyish:            #cccccc
-Dark-Grey Background:     rgba(70, 73, 77, 0.8)
+Seth Tal
 */
 
 
-/*--------------------------------------------- HEADER ------------------------------------------*/
+  /* HEADER PROPERTIES */
+/* ========================================================================== */
+
+/* container */
+/* ================================== */
+
+/* #header-container *{} */
 
 #header-container {
   height: 100vh;
-  background-color: #C5C3C6;
-  /* testing out different styling methods here...
-  display: flex;
-  border: 10px solid;
-  border-radius: 1em 1em 0 0;
-  */
-  box-shadow: inset 0 0 100px #000;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  color: #e4e4e4;
   overflow: hidden;
 }
 
-
-/* Logo */
-#logo {
-  margin: 5% auto 0 auto;
-  width: 115px;
-  transition: 0.3s;
+span {
+  color: #F25F5C;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 
-/* Header Title */
-#header-title {
-  margin: 0;
-  padding: 10% 10%;
-  text-align: center;
-  font-family: "Poiret One";
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.80);
-  transition: 0.3s;
-}
-
-#header-title:hover{
-  cursor: default; color: #cdcdcd;
-}
-
-.highlight {
-  width: inherit;
-  height: inherit;
-  color: #C5C3C6;
-  transition: 0.3s;
-}
-
-.highlight:hover {
-  color: #fff;
-}
-
-
-/* Menu ~ Icon */
-#menu-icon-wrapper {
-  text-align: center;
-  margin: auto;
-  padding: 100px 0px;
-  display: inline-block;
-}
-
-#menu-icon {
-  margin: 0 auto;
-  width: 200px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-  transition: all 250ms ease-in-out;
-  border: 2px solid #999999;
-  border-radius: 2em 2em;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-}
-
-#menu-icon.slideRight {
-  margin-left: 500px;
-}
-
-#menu-icon h3 {
-  margin: 0;
-  padding: 0;
-  font-family: "Noto Sans";
-}
-
-#menu-icon:hover {
-  cursor: pointer;
-  color: #ffffff;
-  background: rgba(153, 153, 153, 0.8);
-  border-color: #ffffff;
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.60);
-  margin-top: -5px;
-}
-
-#menu-icon:active {
-  margin-top: 0px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-}
-
-
-/* Menu ~ Navigation */
-#menu-nav {
-  position: absolute;
-  overflow: hidden;
-  bottom: 0px;
-  height: 0vh;
-  display: flex;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
+/* projects button */
+/* ================================== */
+#project-button-container {
   width: 100%;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-  background: #C5C3C6;
-  transition: all 0.5s;
-}
+  height: 5vh;
 
-#menu-nav ul {
-  margin: auto 0;
-  padding: 0;
-  list-style: none;
-  display: inline-block;
-  font-family: "Noto Sans";
-  color: #ffffff;
-}
-
-/* Close Button */
-#menu-close {
-  float: left;
-  width: 2px;
-  height: 0;
-  cursor: pointer;
-  font-size: 1.5em;
-  transition: 0.3s;
-  display: inline-block;
-}
-
-#menu-close:hover {
-  color: black;
-  font-size: 2em;
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-  font: bold;
-}
-
-.menuButton {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin: 0 5px;
-  border: 2px solid #999999;
-  border-radius: 1em 1em;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
-  float: left;
-  transition: 0.3s;
 }
 
-.menuButton:hover{
-  cursor: pointer;
-  color: #ffffff;
-  background: rgba(153, 153, 153, 0.8);
-  border-color: #ffffff;
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.60);
-  margin-top: -5px;
+#project-button {
+  width: 4.25em;
+  height: 2em;
+  margin-top: 1em;
+  margin-right: 1em;
+
+  text-align: center;
+  text-shadow: 2px 2px 5px #A3A8B1;
+  line-height: 2em;
+
+  font-size: 1.75em;
+  font-family: "Noto Sans";
+  font-weight: bold;
+
+  animation: fade-in 1s ease;
 }
 
-.menuButton:active {
-  margin-top: 0px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.60);
+#project-button:hover {
+  cursor: default;
+  margin-bottom: 10px;
 }
 
-.pageLink {
-  font-size: 14pt;
-  color: inherit;
-  text-decoration: none;
-  transition: all 350ms ease-in-out;
+#project-button:active {
+  margin-bottom: 0;
 }
 
+#project-button-link {
+  /* user-select code bellow not mine, Credit to StackOverflow user: Blowsie */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 
-/*---------------------------------------- MEDIA QUERIES ----------------------------------------*/
-
-/* From 400px to 650px */
-@media (min-width: 400px) {
-
-  /* Header */
-  #header-title {
-    font-size: 36px;
-  }
-
-  /* Nav Menu */
-  #menu-close {
-    padding: 0 50px 0 10px;
-  }
-
-  .menuButton {
-    margin: 1em;
-  }
-
-  .pageLink {
-    padding: 3px 15px;
-  }
-
+  /* Bellow is my own code... */
+  color: #F25F5C;
 }
 
 
-/* From 650px to 1000px */
-@media (min-width: 650px) {
+  /* header content container */
+/* ================================== */
+#header-content-container {
+  height: 95vh;
+  padding-right: 10%;
+  padding-left: 10%;
 
-  /* Header */
-  #header-container {
-    background-image: url("../images/banner-02.png");
-    background-size: auto;
-    color: #46494C;
-    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.8);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+}
 
-  #header-title {
-    font-size: 64px;
-  }
+#header-content-container img {
+  width: auto;
+  height: 1.2em;
+}
 
-  .highlight {
-    color: #1985A1;
-  }
+#nameplate {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
+  text-align: right;
+  text-shadow: 2px 2px 5px #A3A8B1;
 
-  /* Logo */
-  #logo {
-    width: 150px;
-  }
+  animation: fade-in 1s ease;
+}
 
+#briefing {
+  width: 100%;
 
-  /* Menu ~ Icon */
-  #menu-icon {
-    border: 2px solid #46494C;
-    border-radius: 2em 2em;
-    font-size: 18px;
-  }
+  flex-grow: 1;
 
-  #menu-icon:hover {
-    border: 2px solid #303234;
-    border-radius: 2em 2em;
-    background-color: rgba(70, 73, 77, 0.8);
-    color: #cccccc;
-  }
+  text-align: right;
+  // font-size: 1.125em;
+  font-family: "Noto Sans";
 
+  animation: fade-in 1s ease;
+}
 
-  /* Menu ~ Navigation */
-  #menu-nav {
-    background: rgba(227, 227, 227, 0.8);
-    font-size: 16px;
-  }
+#about-button {
+  /* user-select code bellow not mine, Credit to StackOverflow user: Blowsie */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+  /* Bellow is my own code... */
+  width: 100%;
 
-  #menu-nav ul li {
-    border-color: #46494C;
-    color: #46494C;
-  }
+  text-align: center;
+  font-weight: bold;
 
-  #menu-nav ul li:hover {
-    color: #cccccc;
-  }
+  transition: 100ms ease-in-out;
+  animation: fade-up 1s ease;
+}
 
-  #menu-close {
-    padding: 0 75px 0 10px;
-  }
+#about-button:hover {
+  cursor: default;
+  font-size: 3.25em;
+}
 
-  .menuButton {
-    margin: 0 2em;
-  }
+#about-button:active {
+  font-size: 3em;
+}
 
-  .menuButton:hover {
-    background-color: rgba(70, 73, 77, 0.8);
-  }
-
-  .pageLink {
-    padding: 4px 20px;
-  }
-
+#about-button-link:active {
+  color: #AA605C;
 }
 
 
-/* From 1000px to etc */
-@media (min-width: 1000px) {
 
-  /* Header */
-  #header-title{
-    font-size: 72px;
+  /* MEDIA QUERIES */
+/* ========================================================================== */
+
+  /* Very small phones */
+/* ================================== */
+@media only screen and (min-width: 0px) {
+  #project-button-link {
+    font-size: 0.75em;
   }
 
-
-  /* Menu ~ Icon */
-  #menu-icon-wrapper {
-    padding-top: 1em;
+  #nameplate {
+    font-size: 1.5em;
   }
 
-  #menu-icon {
-    font-size: 20px;
-    width: 300px;
-    height: 75px;
+  #briefing {
+    font-size: 0.75em;
   }
 
+  #about-button {
+    font-size: 2em;
+  }
+}
 
-  /* Menu ~ Navigation */
-  #menu-nav {
-    font-size: 18px;
+/* Small phones */
+/* ================================== */
+@media only screen and (min-width: 361px) {
+  #project-button-link {
+    font-size: 1em;
   }
 
-  #menu-close {
-    padding: 0 100px 0 10px;
+  #nameplate {
+    font-size: 2.25em;
   }
 
-  .menuButton {
-    margin: 0 3.5em;
+  #briefing {
+    font-size: 1em;
   }
 
-  .pageLink {
-    padding: 6px 30px;
+  #about-button {
+    font-size: 2em;
+  }
+}
+
+/* Medium phones */
+/* ================================== */
+@media only screen and (min-width: 764px) {
+  #project-button-link {
+    font-size: 1em;
   }
 
+  #nameplate {
+    font-size: 4em;
+  }
+
+  #briefing {
+    font-size: 1.5em;
+  }
+
+  #about-button {
+    font-size: 2em;
+  }
+}
+
+
+/* Tablets+ */
+/* ================================== */
+@media only screen and (min-width: 1024px) {
+  #project-button-link {
+    font-size: 1em;
+  }
+
+  #nameplate {
+    font-size: 5em;
+  }
+
+  #briefing {
+    font-size: 1.75em;
+  }
+
+  #about-button {
+    font-size: 3em;
+  }
+}
+
+
+/* KEYFRAMES */
+/* ========================================================================== */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
