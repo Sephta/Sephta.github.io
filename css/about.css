@@ -36,7 +36,10 @@ Seth Tal
 }
 
 #profile-text {
-  display: table;
+  // display: table;
+
+  height: 300px;
+
   margin-left: 1em;
   grid-column-start: span 2;
 
@@ -45,7 +48,7 @@ Seth Tal
   text-align: left;
 }
 
-#profile-text table {
+/* #profile-text table {
   margin: 0;
 
   border-spacing: 10px;
@@ -86,7 +89,7 @@ Seth Tal
 
   text-align: center;
   font-family: "Noto Sans";
-}
+} */
 
 #proficiency {
   font-size: 2em;
