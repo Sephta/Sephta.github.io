@@ -118,35 +118,53 @@ span {
 }
 
 #about-button {
-  /* user-select code bellow not mine, Credit to StackOverflow user: Blowsie */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-  /* Bellow is my own code... */
-  width: 100%;
+  width: 50px;
+  height: 50px;
 
-  text-align: center;
-  font-weight: bold;
+  margin-bottom: 1em;
 
-  transition: 100ms ease-in-out;
   animation: fade-up 1s ease;
 }
 
+.navArrow {
+  width: 35px;
+  height: 5px;
+
+  background: #484351;
+
+  transition: 150ms ease-in-out;
+}
+
+#na-1 {
+  border-radius: 1em;
+  transform: translateX(-11px) translateY(5px) rotate(45deg);
+  box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+#na-2 {
+  border-radius: 1em;
+  transform: translateX(11px) translateY(0px) rotate(135deg);
+  box-shadow: -8px -5px 15px rgba(0, 0, 0, 0.6);
+}
+
 #about-button:hover {
-  cursor: default;
-  font-size: 3.25em;
+  transform: translateY(-10px);
+}
+
+#about-button:hover #na-1 {
+  box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+#about-button:hover #na-2 {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6);
 }
 
 #about-button:active {
-  font-size: 3em;
+  transform: translateY(0px);
 }
 
-#about-button-link:active {
-  color: #AA605C;
+#about-button:active .navArrow {
+  background: #F25F5C;
 }
 
 
