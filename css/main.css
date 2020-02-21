@@ -1,21 +1,251 @@
-/*
-Seth Tal
+/* 
+* Seth Tal
+* 01/12/2020
+* Main.css file for elements of the page
+
+Idea for the background animated gradient inspired by Manuel Pinto:
+   https://codepen.io/P1N2O/pen/pyBNzX
 */
 
-  /* GLOBAL ATTRIBUTES ~ Normalizations*/
-/* ========================================================================== */
+/* ------------- Normalizations -------------- */
 * {
-  margin: 0;
-  padding: 0;
-  transition: 250ms ease-in-out;
-  font-family: "Poiret One";
-  color: #444452;
-  text-decoration: none;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Noto Sans";
+    /* transition: ease-in-out 1s; */
 }
 
-html, body {
-
-  background: #FBFBFB;
-  scroll-behavior: smooth;
+html {
+    color: white;
 }
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #121212, #cdcdcd);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    padding: 10px 35px;
+
+    /* border: 2px solid white; */
+
+    transition: ease-in-out 250ms;
+}
+
+a:link {
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+/* ----------------- Header ------------------ */
+
+#header-container {
+    height: 100vh;
+    
+    color: #FFFFFF;
+
+    overflow: hidden;
+}
+
+#nav-button-container {
+    width: 75px;
+    height: 75px;
+    margin-top: 25px;
+    margin-left: 20px;
+
+    position: absolute;
+    z-index: 9999;
+    overflow: hidden;
+    transition: ease-in-out 0.2s;
+}
+
+.navButtonBar {
+    width: 45px;
+    height: 6px;
+    margin: 8px 0;
+
+    border-radius: 1em;
+
+    background: #FFFFFF;
+
+    transition: 0.1s ease-in-out;
+}
+
+.x1 {
+    width: 50px;
+
+    transform: rotate(45deg);
+    transform-origin: 30%;
+}
+
+.x2 {
+    display: none;
+}
+
+.x3 {
+    width: 50px;
+
+    transform: rotate(-45deg);
+    transform-origin: 30%;
+}
+
+#nav-button-container:hover {
+    transform: translateY(-5px);
+}
+
+#nav-button-container:active {
+    transform: translateY(5px);
+}
+
+#nav-container {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -200px;
+
+    width: 0px;
+    height: 100%;
+    border-radius: 0 1em 1em 0;
+
+    background: #232323;
+    opacity: 0.9;
+    box-shadow: 10px 0px 15px #121212;
+
+    transition: ease-in-out 350ms;
+}
+
+#nav-container.show {
+    left: 0;
+
+    width: 500px;
+}
+
+.navItem {
+    width: auto;
+    height: 75px;
+    margin: 25px 20px;
+    border-bottom: 3px solid #ffffff0a;
+    border-radius: 0.5em 0.5em 0 0;
+
+    text-align: right;
+    line-height: 75px;
+
+    transition: ease-in-out 0.2s;
+}
+
+.navItem a {
+    font-size: 2em;
+}
+
+.navItem:hover {
+    background: #ffffff0c;
+}
+
+
+/* ----------------- Profile ----------------- */
+
+#profile-container {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+#profile-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    margin: 2rem;
+
+}
+
+#profile-img-background {
+    padding: 3em 3em 3em 3em;
+    border-radius: 1em;
+
+    /* box-shadow: 10px 10px 15px rgba(18, 18, 18, 0.5); */
+
+    /* background: rgba(18, 18, 18, 0.5); */
+}
+
+#profile-img {
+    width: 400px;
+    height: auto;
+    margin-bottom: 3em;
+    border-radius: 50%;
+
+    box-shadow: 5px 5px 15px rgba(18, 18, 18, 0.5);
+}
+
+#profile-img-container h1 {
+    font-size: 75px;
+    text-align: center;
+    text-shadow: 5px 5px 15px rgba(18, 18, 18, 0.5);
+}
+
+#profile-about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 60%;
+    margin: 4rem;
+    border-radius: 1em;
+
+    box-shadow: 10px 10px 15px rgba(18, 18, 18, 0.5);
+}
+
+#subtitle {
+    margin-bottom: 2em;
+
+    text-align: center;
+}
+
+#profile-content-container {
+    width: 100%;
+    height: 40%;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* ----------------- Footer ------------------ */
+
+/* TODO: Build Footer container/content */
+/* #footer-container {
+    height: 1000px;
+} */

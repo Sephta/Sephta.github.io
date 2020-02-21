@@ -1,188 +1,98 @@
-/*
-Seth Tal
+/* 
+* Seth Tal
+* 01/12/2020
+* Main.css file for all of the standardized elements on the webpage
+
+TODO: give credit to these icons bellow:
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 */
 
-
-  /* ABOUT PROPERTIES */
-/* ========================================================================== */
-
-#about-container {
-  margin: 0em 5em 1em 5em;
-  padding-top: 10em;
-
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  grid-row-gap: 5em;
+/* --------------------------------------------------------------------------------------------- */
+.parent-container {
+    width: auto;
+    height: auto;
+    padding: 0rem;
+    margin: 0rem;
+    /* border: 2px solid #fff; */
+    border-radius: 1em;
 }
 
-  /* Special Profile and text divs */
-/* ================================== */
-#profile {
-  grid-column-start: span 1;
-  justify-self: end;
-}
-
-#profile img {
-  width: auto;
-  height: 100px;
-  float: left;
-}
-
-#profile p {
-  text-align: left;
-
-  font-size: 2em;
-  font-family: "Noto Sans";
-}
-
-#profile-text {
-  // display: table;
-
-  height: 300px;
-
-  margin-left: 1em;
-  grid-column-start: span 2;
-
-  justify-self: center;
-
-  text-align: left;
-}
-
-/* #profile-text table {
-  margin: 0;
-
-  border-spacing: 10px;
-}
-
-#profile-text table th {
-  width: 25%;
-
-  text-align: center;
-  padding: 5px;
-  border-bottom: 3px solid #A3A8B1;
-  border-right: 3px solid #A3A8B1;
-
-  font-size: 2.25em;
-}
-
-#profile-text table td {
-  width: 25%;
-
-  text-align: center;
-  border: none;
-  border-bottom: 3px solid #AA605C;
-  border-radius: 0 0 0 0;
-
-  font-size: 1.5em;
-}
-
-#profile-text table td:nth-child(3) {
-  border-bottom: none !important;
-}
-
-#profile-text table td:nth-child(4) {
-  border-bottom: none !important;
-}
-
-#profile-text table * {
-  border-radius: 0.25em 0.25em 0.25em 0.25em;
-
-  text-align: center;
-  font-family: "Noto Sans";
-} */
-
-#proficiency {
-  font-size: 2em;
-}
-
-.proficiency {
-  border-bottom: none !important;
-}
-
-#projects-link {
-  padding-top: 1.25em;
-
-  font-size: 3em;
-  font-family: "Noto Sans";
-  text-align: center;
-}
-
-  /* Showcase Divs */
-/* ================================== */
-.showcase {
-  height: 350px;
-
-  background: grey;
-  grid-column-start: span 1;
-}
-
-.showcaseText {
-  background: lightgrey;
-  grid-column-start: span 2;
-}
-
-.showcase:nth-of-type(even) {
-  margin-left: 1em;
-}
-
-.showcaseText:nth-of-type(even) {
-  margin-left: 1em;
-}
-
-
-  /* MEDIA QUERIES */
-/* ========================================================================== */
-
-@media only screen and (max-width: 1000px) {
-  #about-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+#about-section {
     width: 100%;
-    margin: 0;
-    padding: 10em 0 0 0;
-  }
+    height: 100%;
+    /* border-radius: 1em; */
+    background: rgba(18, 18, 18, 0.5);
 
-  #about-container .showcase {
-    margin: 3em 0 3em 0;
-  }
-
-  #about-container .showcaseText:nth-child(odd) {
-    margin: 3em 0 0em 0;
-  }
-
-  #profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #profile img {
-    width: 100px;
-    display: none;
-  }
-
-  #profile-text {
-    margin-left: 0;
-  }
-
-  #profile-text table {
-    margin: auto;
-    width: inherit !important;
-
-  }
-
-  #profile-text table td:nth-child(even) {
-    border-left: 3px solid #AA605C;
-    border-bottom: none;
-  }
-
-  .showcase:nth-of-type(even) {
-    margin-left: 0;
-  }
-
-  .showcaseText:nth-of-type(even) {
-    margin-left: 0;
-  }
+    display: grid;
+    grid-template-columns: repeat(15, 6.66%);
+    grid-template-rows: repeat(15, 6.66%);
 }
+
+
+/* --------------------------------------------------------------------------------------------- */
+#about-links {
+    grid-column: 2 / 8;
+    grid-row: 2 / 4;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* border: 2px solid yellowgreen; */
+}
+
+#about-links img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 3.5rem;
+}
+
+/* ------------------------------------------- */
+#about-education {
+    grid-column: 2 / 8;
+    grid-row: 4 / 10;
+
+    /* border: 2px solid green; */
+    border-radius: 1em;
+
+    background: rgba(18, 18, 18, 0.25);
+    box-shadow: 10px 10px 15px rgba(18, 18, 18, 0.5);
+}
+
+#about-education h1 {
+    width: auto;
+    height: 20%;
+    margin-top: 1rem;
+    margin-left: 3rem;
+
+    text-align: left;
+}
+
+/* ------------------------------------------- */
+#about-skills {
+    grid-column: 9 / 15;
+    grid-row: 2 / 15;
+
+    /* border: 2px solid red; */
+    border-radius: 1em 1em 1em 1em;
+
+    background: rgba(18, 18, 18, 0.25);
+    box-shadow: 10px 10px 15px rgba(18, 18, 18, 0.5),
+                -10px 10px 20px rgba(18, 18, 18, 0.5);
+}
+
+/* ------------------------------------------- */
+#about-extra {
+    grid-column: 2 / 9;
+    grid-row: 11 / 15;
+
+    /* border: 2px solid blue; */
+    border-radius: 1em 0em 1em 1em;
+
+    background: rgba(18, 18, 18, 0.25);
+    box-shadow: -10px 10px 15px rgba(18, 18, 18, 0.5);
+}
+
+/* --------------------------------------------------------------------------------------------- */
