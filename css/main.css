@@ -8,6 +8,7 @@ Idea for the background animated gradient inspired by Manuel Pinto:
 */
 
 /* ------------- Normalizations -------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +27,11 @@ body {
     height: 100%;
     background: linear-gradient(-45deg, #121212, #cdcdcd);
     background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+}
+
+:root {
+    --main-bg-text-color: #ededed;
 }
 
 @keyframes gradient {
@@ -72,7 +77,8 @@ a:visited {
 #header-container {
     height: 100vh;
     
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: var(--main-bg-text-color);
 
     overflow: hidden;
 }
