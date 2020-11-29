@@ -58,6 +58,7 @@
 
     margin: 0.25em;
     border-radius: 1em;
+    box-shadow: 5px 5px 15px rgba(18, 18, 18, 0.5);
     background: #121212;
     backface-visibility: hidden;
     
