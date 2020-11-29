@@ -68,6 +68,14 @@
 
 .project:hover {
     cursor: pointer;
+    transform: translate(0px, -0.25em);
+    box-shadow: 5px 5px 10px rgba(18, 18, 18, 1);
+}
+
+.project:active {
+    cursor: pointer;
+    transform: translate(0px, 0.25em);
+    box-shadow: 0px 0px 5px rgba(18, 18, 18, 1);
 }
 
 .project:hover img {
