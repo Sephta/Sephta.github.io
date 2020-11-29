@@ -192,6 +192,7 @@ a:visited {
 
 .drop-down-menu ul li a { color: #ededed; }
 .drop-down-menu {
+    visibility: hidden;
     overflow: hidden;
 
     width: 100%;
@@ -212,6 +213,7 @@ a:visited {
 
 .drop-down-menu.show {
     /* height: 10em; */
+    visibility: visible;
     transform: translateX(0);
 }
 
