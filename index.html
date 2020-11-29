@@ -12,7 +12,7 @@
 	<!-- SEO -->
 	<meta name="author" content="Seth Tal">
 	<meta name="description" content="Portfolio">
-	<meta name="keywords" content="web design, webdev, web development, front-end developer portfolio, professional web developer portfolio, student web developer portfolio, game developer, student portfolio, unity game engine, video game design, student game developer, game dev, software engineer, software design, 3D game development, 2D game development, 2d, 3d, 2D, 3D">
+	<meta name="keywords" content="Seth Tal, seth tal, seth, tal, Sephta, sephta, web design, webdev, web development, front-end developer portfolio, professional web developer portfolio, student web developer portfolio, game developer, student portfolio, unity game engine, video game design, student game developer, game dev, software engineer, software design, 3D game development, 2D game development, 2d, 3d, 2D, 3D, game developer, game jam">
 
 
 	<!-- TITLE -->
@@ -23,7 +23,6 @@
 
 
 	<!-- LINKS AND SCRIPTS -->
-	<!-- <link rel="stylesheet" href="./css/header.css"> -->
 	<link rel="stylesheet" href="./css/main.css">
 	<link rel="stylesheet" href="./css/about.css">
 	<link rel="stylesheet" href="./css/scrollbar.css">
@@ -45,139 +44,146 @@
 <body>
 		<div class="container"> <!-- Start of main container -->
 
-				<!-- Header -->
-				<div id="header-container" class="container">
+			<!-- Header -->
+			<div id="header-container" class="container">
+					
+					<!-- Nav button -->
+					<div id="nav-button-container" class="flexContainer" onclick="openButton()">
+						<div id="bar-container">
+							<div id="bar-one" class="navButtonBar"></div>
+							<div id="bar-two" class="navButtonBar"></div>
+							<div id="bar-three" class="navButtonBar"></div>
+						</div>
+					</div>
+
+					<!-- Nav Bar -->
+					<div id="nav-container" class="navContainer">
+						<div id="nav-resume" class="navItem"><a href="#">Resume</a></div>
+						<div id="nav-projects" class="navItem"><a href="#">Projects</a></div>
+						<div id="nav-contact" class="navItem" onclick="openContactInfo()"><a href="#">Contact</a></div>
 						
-						<!-- Nav button -->
-						<div id="nav-button-container" class="flexContainer" onclick="openButton()">
-							<div id="bar-container">
-								<div id="bar-one" class="navButtonBar"></div>
-								<div id="bar-two" class="navButtonBar"></div>
-								<div id="bar-three" class="navButtonBar"></div>
+						<!-- Contact Info drop-down menu -->
+						<div class="drop-down-container">
+							<div class="drop-down-menu" id="contact-info">
+								<ul>
+									<li class="contact-item"><a href="mailto: seth.tal255@gmail.com">Seth.tal255@gmail.com</a></li>
+									<li class="contact-item"><a href="#">(###) - ### - ####</a></li>
+									<li class="contact-item"><a href="https://github.com/Sephta">My Github</a></li>
+									<li class="contact-item"><a href="#">Eugene, OR</a></li>
+								</ul>
 							</div>
 						</div>
-
-						<!-- Nav Bar -->
-						<div id="nav-container" class="navContainer">
-							<div id="nav-resume" class="navItem"><a href="#">Resume</a></div>
-							<div id="nav-projects" class="navItem"><a href="#">Projects</a></div>
-							<div id="nav-contact" class="navItem"><a href="#">Contact</a></div>
+					</div>
+					
+					<!-- Profile -->
+					<div id="profile-container" class="container">
+						<div id="profile-img-container">
+							<div id="profile-img-background">
+								<img id="profile-img" src="./imgs/profile.PNG" alt="">
+								<h1 id="title">Seth Tal</h1>
+							</div>
 						</div>
-						
-						<!-- Profile -->
-						<div id="profile-container" class="container">
-							<div id="profile-img-container">
-								<div id="profile-img-background">
-									<img id="profile-img" src="./imgs/profile.PNG" alt="">
-									<h1 id="title">Seth Tal</h1>
+						<div id="profile-about-container">
+							<div class="parent-container" id="project-list">
+								<!-- <div id="about-links">
+									<img src="./imgs/linkedin.svg" alt="">
+									<img src="./imgs/github.svg" alt="">
+									<img src="./imgs/twitter.svg" alt="">
+								</div> -->
+
+								<div id="list-header">
+									<h1>Personal Projects</h1>
+								</div>
+
+								<div class="parent-container" id="projects">
+									<!-- Scalable project cards with hover overlay -->
+									<div class="project">
+										<a href="https://sephta.itch.io/mix-and-game-jam-submission">
+											<img src="./imgs/MixAndGameJam_CoverImage.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Firearm Shuffle</h3> <hr> <br>
+													<span><p>Submission to the Mix and Game Jam</p></span> <br>
+													<span class="text-highlight">Nov 2020</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://sephta.itch.io/coalescence-battle-system-ld47">
+											<img src="./imgs/Coalescence_BS_CoverImage_5x4_aspect.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Coalescence: <br> Battle System</h3> <hr> <br>
+													<span><p>Submission to the Ludum Dare 47 Game Jam.</p></span> <br>
+													<span class="text-highlight">Oct 2020</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://sephta.itch.io/coalescence">
+											<img src="./imgs/Coalescence_CoverImage_5x4_aspect.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Coalescence</h3> <hr> <br>
+													<span><p>Submission to the Vimjam Game Jam.</p></span> <br>
+													<span class="text-highlight">Sept 2020</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://sephta.itch.io/project-evermorn">
+											<img src="./imgs/Project_EverMorn.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">3D Action RPG </h3> <hr> <br>
+													<span><p>School project @ University of Oregon</p></span> <br>
+													<span class="text-highlight">Apr 2020</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://github.com/Sephta/Sephta.github.io">
+											<img src="./imgs/profile.PNG" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Website Source Code</h3> <hr>	<br>
+													<span><p>Source code for this website is public and available on my github.</p></span> <br>
+													<span class="text-highlight">Dec 2019</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="#">
+											<img src="./imgs/Coming-Soon-Text.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Work in Progress</h3> <hr> <br>
+													<span> <p>This will soon link to another project I am working on.</p> </span> <br>
+													<span class="text-highlight">TBD</span>
+												</div>
+											</div>
+										</a>
+									</div>
 								</div>
 							</div>
-							<div id="profile-about-container">
-								<!-- <h2 id="subtitle">Lorem ipsum dolor sit amet consectetur.</h2> -->
-								<!-- <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis veritatis cupiditate animi eligendi impedit asperiores perspiciatis et quo nesciunt?</h3> -->
-								<div class="parent-container" id="project-list">
-									<!-- <div id="about-links">
-										<img src="./imgs/linkedin.svg" alt="">
-										<img src="./imgs/github.svg" alt="">
-										<img src="./imgs/twitter.svg" alt="">
-									</div> -->
-									<div id="list-header">
-										<h1>Personal Projects</h1>
-									</div>
-									<div class="parent-container" id="projects">
-										<!-- Scalable project cards with hover overlay -->
-										<div class="project">
-											<a href="https://sephta.itch.io/mix-and-game-jam-submission">
-												<img src="./imgs/MixAndGameJam_CoverImage.png" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">Firearm Shuffle</h3> <hr> <br>
-														<span><p>Submission to the Mix and Game Jam</p></span> <br>
-														<span class="text-highlight">Nov 2020</span>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="project">
-											<a href="https://sephta.itch.io/coalescence-battle-system-ld47">
-												<img src="./imgs/Coalescence_BS_CoverImage_5x4_aspect.png" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">Coalescence: <br> Battle System</h3> <hr> <br>
-														<span><p>Submission to the Ludum Dare 47 Game Jam.</p></span> <br>
-														<span class="text-highlight">Oct 2020</span>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="project">
-											<a href="https://sephta.itch.io/coalescence">
-												<img src="./imgs/Coalescence_CoverImage_5x4_aspect.png" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">Coalescence</h3> <hr> <br>
-														<span><p>Submission to the Vimjam Game Jam.</p></span> <br>
-														<span class="text-highlight">Sept 2020</span>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="project">
-											<a href="https://sephta.itch.io/project-evermorn">
-												<img src="./imgs/Project_EverMorn.png" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">3D Action RPG </h3> <hr> <br>
-														<span><p>School project @ University of Oregon</p></span> <br>
-														<span class="text-highlight">Apr 2020</span>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="project">
-											<a href="https://github.com/Sephta/Sephta.github.io">
-												<img src="./imgs/profile.PNG" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">Website Source Code</h3> <hr>	<br>
-														<span><p>Source code for this website is public and available on my github.</p></span> <br>
-														<span class="text-highlight">Dec 2019</span>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="project">
-											<a href="#">
-												<img src="./imgs/Coming-Soon-Text.png" alt="hello world">
-												<div class="middle">
-													<div class="text">
-														<h3 class="text-alignment-center text-pad-bottom">Work in Progress</h3> <hr> <br>
-														<span> <p>This will soon link to another project I am working on.</p> </span> <br>
-														<span class="text-highlight">TBD</span>
-													</div>
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
+					</div>
+			</div>
 
-						<!-- <div id="profile-content-container">
-						
-						</div> -->
-				
-				</div>
+			<!-- Content -->
+			<div id="content-container" class="container">
+					
+			</div>
 
-				<!-- Content -->
-				<div id="content-container" class="container">
-						
-				</div>
+			<!-- Footer -->
+			<div id="footer-container" class="container">
 
-				<!-- Footer -->
-				<div id="footer-container" class="container">
-
-				</div>
+			</div>
 		
 		</div> <!-- End of main container -->
 

@@ -16,6 +16,7 @@ Idea for the background animated gradient inspired by Manuel Pinto:
     box-sizing: border-box;
     font-family: "Noto Sans";
     /* transition: ease-in-out 1s; */
+    list-style-type: none;
 }
 
 html {
@@ -178,6 +179,57 @@ a:visited {
     background: #ffffff0c;
 }
 
+/* ------------- Contact Dropdown ------------ */
+
+/* #nav-contact:hover {
+
+} */
+
+.drop-down-container {
+    display: block;
+    margin: 25px 20px;
+}
+
+.drop-down-menu ul li a { color: #ededed; }
+.drop-down-menu {
+    overflow: hidden;
+
+    width: 100%;
+    height: 10em;
+
+    /* background-color: #ededed; */
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    border-radius: 1em;
+
+    transform: translateX(100%);
+    transition: ease-in-out 250ms;
+}
+/* .drop-down-menu:hover {} */
+
+.drop-down-menu.show {
+    /* height: 10em; */
+    transform: translateX(0);
+}
+
+.contact-item {
+    width: 100%;
+    min-height: 2rem;
+    padding: 0 2em 0 0;
+    margin: 0 0 0 0;
+
+    text-align: right;
+    line-height: 2rem;
+}
+
+.contact-item a {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 /* ----------------- Profile ----------------- */
 
