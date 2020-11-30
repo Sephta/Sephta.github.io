@@ -1,0 +1,160 @@
+/* Seth Tal
+ * 11 / 29 / 2020
+ * This is the css associated with my resume template page
+*/
+
+/* GLOBALS */
+/* --------------------------------------------------------------------------------------------- */
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Noto Sans";
+    list-style-type: none;
+}
+
+html
+{
+    width: 100%;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+:root /* For Variables */ 
+{}
+
+a:link {
+    color: #121212;
+}
+
+a:visited {
+    color: #121212;
+}
+
+
+/* RESUME DEFINED CONTENT */
+/* --------------------------------------------------------------------------------------------- */
+.container
+{
+    /* display: flex; */
+    /* overflow: hidden; */
+}
+
+#resume-container
+{
+    position: absolute;
+    left: calc(50% - 425px);
+    /* margin: auto; */
+    /* padding: 0; */
+    width: 850px;
+    height: 1100px;
+
+    background-color: #121212;
+    color: #121212;
+}
+
+/* HEADER */
+/* =========================================== */
+#resume-header
+{
+    position: relative;
+    height: 350px;
+
+    display: flex;
+    flex-flow: row;
+
+    background-color: #ededed;
+}
+
+#header-intro
+{
+    width: 50%;
+}
+
+#header-intro *
+{
+    margin: 0.25em 10px;
+}
+
+#header-contact-info
+{
+    width: 50%;
+}
+
+#resume-header h1
+{
+    font-size: 3.5em;
+}
+
+#resume-header h2
+{
+    font-size: 1.75em;
+}
+
+#resume-header h3
+{
+    font-size: 1em;
+}
+
+
+/* CONTACT INFO */
+/* =========================================== */
+#header-contact-info
+{
+
+}
+
+#contact-info
+{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.contact-info-item
+{
+    margin: 1em 10px 1em 0;
+
+    list-style-type: none;
+}
+
+.contact-info-item a
+{
+
+}
+
+
+/* CONTENT */
+/* =========================================== */
+#resume-content
+{
+    height: 600px;
+    
+    background-color: #cdcdcd;
+}
+
+
+/* FOOTER */
+/* =========================================== */
+#resume-footer
+{
+    height: 150px;
+
+    background-color: #ababab;
+}
+
+
+/* USEFUL CLASSES */
+/* --------------------------------------------------------------------------------------------- */
+/* ... */
+/* --------------------------------------------------------------------------------------------- */
