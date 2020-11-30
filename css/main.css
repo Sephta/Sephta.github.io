@@ -77,8 +77,7 @@ a:visited {
 
 #header-container {
     height: 100vh;
-    
-    /* color: #FFFFFF; */
+
     color: var(--main-bg-text-color);
 
     overflow: hidden;
@@ -155,7 +154,7 @@ a:visited {
 #nav-container.show {
     left: 0;
 
-    width: 500px;
+    width: 25%;
 }
 
 .navItem {
@@ -192,13 +191,13 @@ a:visited {
 
 .drop-down-menu ul li a { color: #ededed; }
 .drop-down-menu {
-    visibility: hidden;
+    visibility: visible;
     overflow: hidden;
 
     width: 100%;
-    height: 10em;
+    height: 15em;
 
-    /* background-color: #ededed; */
+    /* background-color: #343434; */
 
     display: flex;
     justify-content: flex-end;
@@ -206,31 +205,71 @@ a:visited {
 
     border-radius: 1em;
 
-    transform: translateX(100%);
     transition: ease-in-out 250ms;
 }
-/* .drop-down-menu:hover {} */
 
-.drop-down-menu.show {
-    /* height: 10em; */
-    visibility: visible;
-    transform: translateX(0);
+.drop-down-menu ul
+{
+    width: 45%;
+    height: 100%;
+    margin-right: 1em;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
 
 .contact-item {
+    visibility: hidden;
+
     width: 100%;
-    min-height: 2rem;
-    padding: 0 2em 0 0;
-    margin: 0 0 0 0;
+    height: 3em;
+    min-height: 2em;
+    /* padding: 0 2em 0 0; */
+    /* margin: 10px 5px; */
+
+    border-bottom: 3px solid #ffffff0a;
+    border-radius: 0.5em 0.5em 0 0;
 
     text-align: right;
-    line-height: 2rem;
+    line-height: 3em;
+
+    transform: translateX(100%);
+    transition: ease-in-out 250ms;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    background: #ffffff0c;
 }
 
 .contact-item a {
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+/* .contact-item a:hover {
+    height: 100%;
+    background: #ffffff0c;
+} */
+
+.contact-item.show {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+#ci1 {
+    transition-delay: 0.0s;
+}
+#ci2 {
+    transition-delay: 0.05s;
+}
+#ci3 {
+    transition-delay: 0.1s;
+}
+#ci4 {
+    transition-delay: 0.15s;
 }
 
 /* ----------------- Profile ----------------- */
@@ -270,6 +309,8 @@ a:visited {
     border-radius: 50%;
 
     box-shadow: 5px 5px 15px rgba(18, 18, 18, 0.5);
+
+    transition: ease-in-out 250ms;
 }
 
 #profile-img-container h1 {
