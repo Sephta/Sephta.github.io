@@ -1,9 +1,9 @@
 module.exports = {
   pathPrefix: "/Sephta.github.io",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Seth Tal`,
+    description: `Contributing to industry innovation, entry level position in software engineering projects, granted opportunity to grow and develop skills as a programmer and individual.`,
+    author: `@seth-tal`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
