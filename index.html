@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- META SET -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	<!-- SEO -->
+	<meta name="author" content="Seth Tal">
+	<meta name="description" content="Portfolio">
+	<meta name="keywords" content="Seth Tal, seth tal, seth, tal, Sephta, sephta, web design, webdev, web development, front-end developer portfolio, professional web developer portfolio, student web developer portfolio, game developer, student portfolio, unity game engine, video game design, student game developer, game dev, software engineer, software design, 3D game development, 2D game development, 2d, 3d, 2D, 3D, game developer, game jam">
+
+
+	<!-- TITLE -->
+	<title>Seth Tal | Portfolio</title>
+	<link rel="icon" sizes="180x180" href="./imgs/Sephta_Logo.svg">
+	<link rel="icon" sizes="32x32" href="./imgs/Sephta_Logo.svg">
+	<link rel="icon" sizes="16x16" href="./imgs/Sephta_Logo.svg">
+
+
+	<!-- LINKS AND SCRIPTS -->
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/about.css">
+	<link rel="stylesheet" href="./css/scrollbar.css">
+	<link rel="stylesheet" href="./css/mobile.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret One" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="./css/footer.css"> -->
+	<!-- <link rel="stylesheet" href="./css/about.css"> -->
+	<!-- <link rel="stylesheet" href="./css/skills.css"> -->
+
+	<!-- COLORS -->
+	<!-- Grey Nurse:               #FBFBFB -->
+	<!-- Grey Chateau:             #A3A8B1 -->
+	<!-- Burnt Sienna:             #F25F5C -->
+	<!-- Matrix:                   #AA605C -->
+	<!-- Ship Grey:                #484351 -->
+	<!-- Dark Grey:                #121212 -->
+
+</head>
+<body>
+		<div class="container"> <!-- Start of main container -->
+
+			<!-- Header -->
+			<div id="header-container" class="container">
+					
+					<!-- Nav button -->
+					<div id="nav-button-container" class="flexContainer" onclick="openButton()">
+						<div id="bar-container">
+							<div id="bar-one" class="navButtonBar"></div>
+							<div id="bar-two" class="navButtonBar"></div>
+							<div id="bar-three" class="navButtonBar"></div>
+						</div>
+					</div>
+
+					<!-- Nav Bar -->
+					<div id="nav-container" class="navContainer">
+						<div id="nav-resume" class="navItem"><a href="./resume/stal_resume.pdf">Resume</a></div>
+						<div id="nav-projects" class="navItem"><a href="https://github.com/Sephta">My GitHub</a></div>
+						<div id="nav-contact" class="navItem" onclick="openContactInfo()"><a href="#">Contact</a></div>
+						
+						<!-- Contact Info drop-down menu -->
+						<div class="drop-down-container">
+							<div class="drop-down-menu" id="contact-info">
+								<ul>
+									<li class="contact-item" id="ci1"><a href="mailto: seth.tal255@gmail.com">Seth.tal255@gmail.com</a></li>
+									<li class="contact-item" id="ci2"><a href="#">(###) - ### - ####</a></li>
+									<!-- <li class="contact-item" id="ci3"><a href="https://github.com/Sephta">My Github</a></li> -->
+									<li class="contact-item" id="ci4"><a href="#">Eugene, OR</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Profile -->
+					<div id="profile-container" class="container">
+						<div id="profile-img-container">
+							<div id="profile-img-background">
+								<img id="profile-img" src="./imgs/profile.PNG" alt="">
+								<h1 id="title">Seth Tal</h1>
+							</div>
+						</div>
+						<div id="profile-about-container">
+							<div class="parent-container" id="project-list">
+								<!-- <div id="about-links">
+									<img src="./imgs/linkedin.svg" alt="">
+									<img src="./imgs/github.svg" alt="">
+									<img src="./imgs/twitter.svg" alt="">
+								</div> -->
+
+								<div id="list-header">
+									<h1>Projects / Experience</h1>
+								</div>
+
+								<div class="parent-container" id="projects">
+									<!-- Scalable project cards with hover overlay -->
+									<div class="project">
+										<a href="https://sephta.itch.io/mix-and-game-jam-submission">
+											<img src="./imgs/MixAndGameJam_CoverImage.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Firearm Shuffle</h3> <hr> <br>
+													<span><p>Submission to the Mix and Game Jam</p></span> <br>
+													<span class="text-highlight">Nov 2020, Unity + C#</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project" style="background-color: #ededed;">
+										<a href="https://github.com/Sephta/time-series-modeling">
+											<img src="./imgs/time_series_icon.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Transformation Trees</h3> <hr> <br>
+													<span><p>Time Series Modeling library written in python. <a style="color: #4242ff; text-decoration: underline;" href="https://pypi.org/project/transformation-tree/">PyPi</a> </p></span> <br>
+													<span class="text-highlight">Q1 2021 , Python</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project" style="background-color: #1b212c;">
+										<a href="https://github.com/5-Bits-in-a-Byte/message-board">
+											<img src="./imgs/Inquire ICON - Dark Theme.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Inquire</h3> <hr> <br>
+													<span><p>Message-board webapp built for Instructors and students.</p></span> <br>
+													<span class="text-highlight">2021 , ReactJS + Flask + MongoDB</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project" style="background-color: #292929;">
+										<a href="https://sephta.itch.io/project-evermorn">
+											<img src="./imgs/Unity.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">3D Action RPG </h3> <hr> <br>
+													<span><p>School project @ University of Oregon</p></span> <br>
+													<span class="text-highlight">Q2 2020 , Unity + C# </span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://github.com/Sephta/Sephta.github.io">
+											<img src="./imgs/HTML-image.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Website Source Code</h3> <hr>	<br>
+													<span><p>Source code for this website is public and available on my github.</p></span> <br>
+													<span class="text-highlight">Dec 2019 , HTML + CSS</span>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="project">
+										<a href="https://github.com/alexmarozick/DarkWebCrawler">
+											<img src="./imgs/deepweb.png" alt="hello world">
+											<div class="middle">
+												<div class="text">
+													<h3 class="text-alignment-center text-pad-bottom">Dark Web Scraper</h3> <hr> <br>
+													<span> <p>School project where I built a Web Scraper to grab data from the TOR network.</p> </span> <br>
+													<span class="text-highlight">Q1 2021, C# + .NET</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+
+			<!-- Content -->
+			<div id="content-container" class="container">
+					
+			</div>
+
+			<!-- Footer -->
+			<div id="footer-container" class="container">
+
+			</div>
+		
+		</div> <!-- End of main container -->
+
+		<!-- JS File Links -->
+		<script src="./js/main.js" charset="utf-8"></script>
+</body>
+</html>
