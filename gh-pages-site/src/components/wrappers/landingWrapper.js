@@ -1,12 +1,15 @@
-import React from 'react';
+import React from "react"
+import Header from "../buildingBlocks/Header"
+import Footer from "../buildingBlocks/Footer"
 
-const LandingWrapper = ({children, ...props}) => {
+const LandingWrapper = ({ children, ...props }) => {
   return (
-    <div>
+    <>
+      <Header />
       {children}
-      <h1>HELLO WORLD</h1>
-    </div>
-  );
-};
+      <Footer />
+    </>
+  )
+}
 
-export default LandingWrapper;
+export default LandingWrapper
