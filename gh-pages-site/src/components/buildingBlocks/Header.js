@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import GatsbyIcon from "../../images/gatsby-icon.png";
 import CodeIcon from "../../images/coding.svg";
+import SunIcon from "../../images/sun.svg";
+import MoonIcon from "../../images/moon.svg";
+import { BackgroundColor } from "gatsby-cli/node_modules/chalk";
 
 const Header = ({ useTailwind, siteThemeState, ...props }) => {
   return (
@@ -64,16 +67,24 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
           </ul>
         </div>
       ) : (
-        <HeaderWrapper>
-          <button
-            onClick={e => {
-              siteThemeState.setState(!siteThemeState.state);
-              console.log("Theme State: ", siteThemeState.state);
-            }}
-          >
-            Switch Theme
-          </button>
-        </HeaderWrapper>
+        <>
+          <HeaderWrapper>
+            <ThemeSwitchButton
+              id={"theme-switch-button"}
+              themeSettings={siteThemeState.state}
+              onClick={e => {
+                siteThemeState.setState(!siteThemeState.state);
+                console.log("Theme State: ", siteThemeState.state);
+              }}
+            >
+              {siteThemeState.state ? (
+                <ThemeSwitchIcon src={MoonIcon} alt="" />
+              ) : (
+                <ThemeSwitchIcon src={SunIcon} alt="" />
+              )}
+            </ThemeSwitchButton>
+          </HeaderWrapper>
+        </>
       )}
     </>
   );
@@ -85,5 +96,32 @@ const HeaderWrapper = styled.div`
   /* width: auto; */
   height: 100px;
 
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+
   border: 1px solid red;
+`;
+
+const ThemeSwitchButton = styled.a`
+  margin: 1em;
+  padding: 1em;
+
+  /* border: 1px solid green; */
+  border-radius: 1em;
+
+  ${props =>
+    props.themeSettings
+      ? css`
+          box-shadow: 2px 2px 5px #00000036;
+        `
+      : css`
+          box-shadow: 2px 2px 5px #ffffff36;
+          background-color: #232323;
+        `}
+`;
+
+const ThemeSwitchIcon = styled.img`
+  width: 36px;
+  height: 36px;
 `;
