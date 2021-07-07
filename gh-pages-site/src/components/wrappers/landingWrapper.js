@@ -1,15 +1,24 @@
-import React from "react"
-import Header from "../buildingBlocks/Header"
-import Footer from "../buildingBlocks/Footer"
+import React from "react";
+import styled from "styled-components";
 
-const LandingWrapper = ({ children, ...props }) => {
+import { Header, Footer } from "../buildingBlocks";
+
+const LandingWrapper = ({ children, siteThemeState, ...props }) => {
   return (
-    <>
-      <Header />
+    <Wrapper
+      id={"landing-wrapper"}
+      className={
+        siteThemeState.state ? "light-theme-container" : "dark-theme-container"
+      }
+    >
+      {/* <Header useTailwind /> */}
+      <Header siteThemeState={siteThemeState} />
       {children}
       <Footer />
-    </>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default LandingWrapper
+export default LandingWrapper;
+
+const Wrapper = styled.div``;

@@ -1,16 +1,21 @@
-import React from "react"
+import React from "react";
+import styled from "styled-components";
 
 const Footer = ({ props }) => {
   return (
     <>
-      <div
+      <FooterWrapper
         id="footer-wrapper"
         className={"flex items-center border-2 border-solid border-grey-900"}
       >
         <h1>FOOTER</h1>
-      </div>
+      </FooterWrapper>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
+
+const FooterWrapper = styled.div`
+  border: 1px solid orange;
+`;
