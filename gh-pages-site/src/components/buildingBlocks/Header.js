@@ -68,7 +68,9 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
         </div>
       ) : (
         <>
-          <HeaderWrapper>
+          <HeaderWrapper id={"header-wrapper"}>
+            {/* PUT NAME and Maybe logo here */}
+            {/* Add Site Navbar here */}
             <ThemeSwitchButton
               id={"theme-switch-button"}
               themeSettings={siteThemeState.state}
@@ -93,7 +95,7 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
 export default Header;
 
 const HeaderWrapper = styled.div`
-  /* width: auto; */
+  width: 100%;
   height: 100px;
 
   display: flex;

@@ -30,5 +30,6 @@ const Footer = ({ props }) => {
 export default Footer;
 
 const FooterWrapper = styled.div`
+  height: 200px;
   border: 1px solid orange;
 `;
