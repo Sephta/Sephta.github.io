@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { About } from "../sections";
+import { About, Projects } from "../sections";
 
 const HomeWrapper = ({ siteThemeState, ...props }) => {
   return (
     <>
       <Wrapper id={"home-wrapper"} className={`debug-border`}>
         <About siteThemeState={siteThemeState} />
+        <Projects siteThemeState={siteThemeState} />
       </Wrapper>
     </>
   );

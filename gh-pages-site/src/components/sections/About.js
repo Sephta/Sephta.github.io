@@ -19,7 +19,8 @@ const About = ({ siteThemeState, ...props }) => {
 
   return (
     <>
-      <Wrapper className={`debug-border`}>
+      {/* <Wrapper className={`debug-border`}> */}
+      <Wrapper>
         <DefaultWrapper style={ContentStyles}>
           <img src="" alt="" width="100px" height="auto" />
         </DefaultWrapper>

@@ -5,6 +5,31 @@ import { StaticImage } from "gatsby-plugin-image";
 import SEO from "../components/seo";
 import { HomeWrapper, LandingWrapper } from "../components/wrappers";
 
+/** GITHUB GraphQL api query for pinned repositories
+{
+  viewer {
+    login
+    name
+    pinnedItems(first: 6, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          id
+          name
+          url
+          description
+          homepageUrl
+          stargazerCount
+          primaryLanguage {
+            name
+            color
+          }
+        }
+      }
+    }
+  }
+}
+*/
+
 const IndexPage = ({ props }) => {
   const [themeState, setThemeState] = React.useState(true);
 
