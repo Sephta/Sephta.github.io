@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { About } from "../sections";
 
-const HomeWrapper = () => {
+const HomeWrapper = ({ siteThemeState, ...props }) => {
   return (
     <>
-      <Wrapper id={"home-wrapper"}>
-        <h1
-          className={"text-center text-5xl font-mono font-bold text-grey-900"}
-        >
-          HOME PAGE
-        </h1>
+      <Wrapper id={"home-wrapper"} className={`debug-border`}>
+        <About siteThemeState={siteThemeState} />
       </Wrapper>
     </>
   );
@@ -19,6 +16,6 @@ export default HomeWrapper;
 
 const Wrapper = styled.div`
   width: 100%;
+  padding: 1em;
   /* min-height: calc(100vh - 300px); */
-  border: 1px solid blue;
 `;

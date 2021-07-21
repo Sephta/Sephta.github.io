@@ -4,10 +4,7 @@ import styled from "styled-components";
 const Footer = ({ props }) => {
   return (
     <>
-      <FooterWrapper
-        id="footer-wrapper"
-        className={"flex items-center border-2 border-solid border-grey-900"}
-      >
+      <FooterWrapper id="footer-wrapper">
         <h1>FOOTER</h1>
         <div>
           Sun and Moon Icons made by{" "}
@@ -31,5 +28,7 @@ export default Footer;
 
 const FooterWrapper = styled.div`
   height: 200px;
-  border: 1px solid orange;
+
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
 `;

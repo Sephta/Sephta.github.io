@@ -10,6 +10,7 @@ const IndexPage = ({ props }) => {
 
   // This useEffector changes css colorTheme class attached to the body html element
   React.useEffect(() => {
+    console.log("HERE");
     let oldBodyTheme = document.body.classList[0];
     let newBodyTheme = themeState
       ? "light-theme-container"
@@ -23,7 +24,9 @@ const IndexPage = ({ props }) => {
       siteThemeState={{ state: themeState, setState: setThemeState }}
     >
       <SEO title="Home" />
-      <HomeWrapper />
+      <HomeWrapper
+        siteThemeState={{ state: themeState, setState: setThemeState }}
+      />
     </LandingWrapper>
   );
 };

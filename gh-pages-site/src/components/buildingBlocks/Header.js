@@ -1,13 +1,29 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled, { css } from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 import GatsbyIcon from "../../images/gatsby-icon.png";
 import CodeIcon from "../../images/coding.svg";
 import SunIcon from "../../images/sun.svg";
 import MoonIcon from "../../images/moon.svg";
 import { BackgroundColor } from "gatsby-cli/node_modules/chalk";
 
+import "../../css/styles.css";
+
 const Header = ({ useTailwind, siteThemeState, ...props }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            github
+            linkedIn
+          }
+        }
+      }
+    `
+  );
+
   return (
     <>
       {useTailwind ? (
@@ -70,9 +86,11 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
         <>
           <HeaderWrapper id={"header-wrapper"}>
             {/* PUT NAME and Maybe logo here */}
-            {/* Add Site Navbar here */}
+            <SiteHeaderTitle>Seth Tal</SiteHeaderTitle>
+
             <ThemeSwitchButton
               id={"theme-switch-button"}
+              className={"noTextHighlight styles-default-hover"}
               themeSettings={siteThemeState.state}
               onClick={e => {
                 siteThemeState.setState(!siteThemeState.state);
@@ -85,6 +103,42 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
                 <ThemeSwitchIcon src={SunIcon} alt="" />
               )}
             </ThemeSwitchButton>
+
+            <NavWrapper>
+              <NavItem
+                className={`noTextHighlight styles-navItem-hover ${
+                  siteThemeState.state
+                    ? "styles-dark-box-shadow"
+                    : "styles-light-box-shadow"
+                }`}
+                href={"#portfolio"}
+                themeSettings={siteThemeState.state}
+              >
+                Portfolio
+              </NavItem>
+              <NavItem
+                className={`noTextHighlight styles-navItem-hover ${
+                  siteThemeState.state
+                    ? "styles-dark-box-shadow"
+                    : "styles-light-box-shadow"
+                }`}
+                href={site.siteMetaData?.github || `#`}
+                themeSettings={siteThemeState.state}
+              >
+                GitHub
+              </NavItem>
+              <NavItem
+                className={`noTextHighlight styles-navItem-hover ${
+                  siteThemeState.state
+                    ? "styles-dark-box-shadow"
+                    : "styles-light-box-shadow"
+                }`}
+                href={"#contact"}
+                themeSettings={siteThemeState.state}
+              >
+                Contact
+              </NavItem>
+            </NavWrapper>
           </HeaderWrapper>
         </>
       )}
@@ -96,17 +150,22 @@ export default Header;
 
 const HeaderWrapper = styled.div`
   width: 100%;
-  height: 100px;
+  min-height: 100px;
 
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  flex-wrap: wrap;
+`;
 
-  border: 1px solid red;
+const SiteHeaderTitle = styled.h1`
+  margin: 0 0 0 1em;
+
+  font-size: 24px;
 `;
 
 const ThemeSwitchButton = styled.a`
-  margin: 1em;
+  margin: 1em 1em 1em auto;
   padding: 1em;
 
   /* border: 1px solid green; */
@@ -126,4 +185,40 @@ const ThemeSwitchButton = styled.a`
 const ThemeSwitchIcon = styled.img`
   width: 36px;
   height: 36px;
+`;
+
+const NavWrapper = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+const NavItem = styled.a`
+  width: 100px;
+  height: 50px;
+  /* padding: 1em; */
+  margin: 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+
+  :link {
+    color: ${props =>
+      props.themeSettings
+        ? css`var(--background-dark)`
+        : css`var(--background-light)`};
+  }
+
+  :visited {
+    color: ${props =>
+      props.themeSettings
+        ? css`var(--background-dark)`
+        : css`var(--background-light)`};
+  }
 `;

@@ -6,6 +6,10 @@
   transition: 100ms ease-out;
 }
 
+*:link {
+  text-decoration: none;
+}
+
 :root {
   /* COLOR PALETTE */
   --background-dark: #121212;
@@ -79,6 +83,17 @@ select {
 .light-theme-container {
   background-color: var(--background-light);
   color: var(--background-dark);
+}
+
+.noTextHighlight {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.debug-border {
+  border: 1px solid red;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
