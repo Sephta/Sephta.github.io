@@ -7,7 +7,8 @@ const HomeWrapper = ({ siteThemeState, ...props }) => {
     <>
       <Wrapper id={"home-wrapper"} className={`debug-border`}>
         <About siteThemeState={siteThemeState} />
-        <Projects siteThemeState={siteThemeState} />
+        {/* <div style={{ height: `100vh` }}></div> */}
+        <Projects id={`#projects`} siteThemeState={siteThemeState} />
       </Wrapper>
     </>
   );

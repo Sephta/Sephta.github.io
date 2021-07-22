@@ -1,16 +1,13 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import "../../css/styles.css";
 
 import { DefaultWrapper } from "../common/commonStyles";
 
 const About = ({ siteThemeState, ...props }) => {
   const ContentStyles = {
-    boxShadow: `2px 2px 5px ${
-      siteThemeState?.state
-        ? css`rgba(0,0,0,0.15)`
-        : css`rgba(255,255,255,0.15)`
-    }`,
     borderRadius: `5px`,
+    boxShadow: `1px 1px 3px rgba(0,0,0,0.5)`,
     flexGrow: `1`,
     display: `flex`,
     alignItems: `center`,
@@ -21,7 +18,10 @@ const About = ({ siteThemeState, ...props }) => {
     <>
       {/* <Wrapper className={`debug-border`}> */}
       <Wrapper>
-        <DefaultWrapper style={ContentStyles}>
+        <DefaultWrapper
+          // className={`styles-dark-box-shadow`}
+          style={ContentStyles}
+        >
           <img src="" alt="" width="100px" height="auto" />
         </DefaultWrapper>
         <DefaultWrapper style={ContentStyles}>Content</DefaultWrapper>

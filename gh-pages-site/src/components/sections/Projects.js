@@ -39,6 +39,7 @@ const Projects = ({ siteThemeState, ...props }) => {
       homepageUrl={node.homepageUrl}
       stargazerCount={node.stargazerCount}
       primaryLanguage={node.primaryLanguage}
+      siteThemeState={siteThemeState}
     />
   ));
 
@@ -46,7 +47,8 @@ const Projects = ({ siteThemeState, ...props }) => {
 
   return (
     <>
-      <DefaultWrapper className={`debug-border`}>
+      <DefaultWrapper id={`projects`} className={`debug-border`}>
+        <SectionTitle>Projects</SectionTitle>
         <CardContainer>{githubCards}</CardContainer>
       </DefaultWrapper>
     </>
@@ -55,9 +57,15 @@ const Projects = ({ siteThemeState, ...props }) => {
 
 export default Projects;
 
+const SectionTitle = styled.h2`
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+`;
+
 const CardContainer = styled.div`
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 `;

@@ -106,33 +106,21 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
 
             <NavWrapper>
               <NavItem
-                className={`noTextHighlight styles-navItem-hover ${
-                  siteThemeState.state
-                    ? "styles-dark-box-shadow"
-                    : "styles-light-box-shadow"
-                }`}
-                href={"#portfolio"}
+                className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow `}
+                href={"#projects"}
                 themeSettings={siteThemeState.state}
               >
                 Portfolio
               </NavItem>
               <NavItem
-                className={`noTextHighlight styles-navItem-hover ${
-                  siteThemeState.state
-                    ? "styles-dark-box-shadow"
-                    : "styles-light-box-shadow"
-                }`}
+                className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow`}
                 href={site.siteMetaData?.github || `#`}
                 themeSettings={siteThemeState.state}
               >
                 GitHub
               </NavItem>
               <NavItem
-                className={`noTextHighlight styles-navItem-hover ${
-                  siteThemeState.state
-                    ? "styles-dark-box-shadow"
-                    : "styles-light-box-shadow"
-                }`}
+                className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow`}
                 href={"#contact"}
                 themeSettings={siteThemeState.state}
               >
@@ -156,6 +144,8 @@ const HeaderWrapper = styled.div`
   /* justify-content: center; */
   align-items: center;
   flex-wrap: wrap;
+
+  scroll-behavior: smooth;
 `;
 
 const SiteHeaderTitle = styled.h1`
@@ -177,7 +167,7 @@ const ThemeSwitchButton = styled.a`
           box-shadow: 2px 2px 5px #00000036;
         `
       : css`
-          box-shadow: 2px 2px 5px #ffffff36;
+          box-shadow: 2px 2px 5px #00000036;
           background-color: #232323;
         `}
 `;

@@ -19,6 +19,19 @@ const Footer = ({ props }) => {
             www.flaticon.com
           </a>
         </div>
+        <div>
+          Star and GitHub icons made by{" "}
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+          >
+            Pixel perfect
+          </a>{" "}
+          from{" "}
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com
+          </a>
+        </div>
       </FooterWrapper>
     </>
   );
@@ -28,6 +41,8 @@ export default Footer;
 
 const FooterWrapper = styled.div`
   height: 200px;
+
+  padding: 1em;
 
   border: 2px solid #e7e7e7;
   border-radius: 5px;

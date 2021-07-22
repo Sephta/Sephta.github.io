@@ -1,25 +1,23 @@
 .styles-default-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  /* transform: translateY(-2px); */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .styles-default-hover:active {
-  transform: translateY(0px);
+  /* transform: translateY(0px); */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
 }
 
 .styles-navItem-hover:hover {
-  transform: translateY(-5px);
-  /* box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.07); */
+  /* transform: translateY(-2px); */
 }
 
 .styles-navItem-hover:active {
-  transform: translateY(0px);
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07); */
+  /* transform: translateY(0px); */
 }
 
 .styles-dark-box-shadow:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .styles-dark-box-shadow:active {
@@ -27,7 +25,7 @@
 }
 
 .styles-light-box-shadow:hover {
-  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
 }
 
 .styles-light-box-shadow:active {

@@ -21,4 +21,6 @@ const LandingWrapper = ({ children, siteThemeState, ...props }) => {
 
 export default LandingWrapper;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  scroll-behavior: smooth;
+`;
