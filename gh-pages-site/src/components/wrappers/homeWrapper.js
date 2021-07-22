@@ -5,7 +5,7 @@ import { About, Projects } from "../sections";
 const HomeWrapper = ({ siteThemeState, ...props }) => {
   return (
     <>
-      <Wrapper id={"home-wrapper"} className={`debug-border`}>
+      <Wrapper id={"home-wrapper"}>
         <About siteThemeState={siteThemeState} />
         {/* <div style={{ height: `100vh` }}></div> */}
         <Projects id={`#projects`} siteThemeState={siteThemeState} />

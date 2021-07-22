@@ -107,24 +107,24 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
             <NavWrapper>
               <NavItem
                 className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow `}
-                href={"#projects"}
+                // href={"#projects"}
                 themeSettings={siteThemeState.state}
               >
-                Portfolio
+                <Link to={`/#projects`}>Portfolio</Link>
               </NavItem>
               <NavItem
                 className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow`}
-                href={site.siteMetaData?.github || `#`}
+                // href={site.siteMetaData?.github || `#`}
                 themeSettings={siteThemeState.state}
               >
-                GitHub
+                <Link to={site.siteMetaData?.github || `#`}>GitHub</Link>
               </NavItem>
               <NavItem
                 className={`noTextHighlight styles-navItem-hover styles-dark-box-shadow`}
-                href={"#contact"}
+                // href={"#contact"}
                 themeSettings={siteThemeState.state}
               >
-                Contact
+                <Link to={`#contact`}>Contact</Link>
               </NavItem>
             </NavWrapper>
           </HeaderWrapper>

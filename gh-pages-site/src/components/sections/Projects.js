@@ -47,7 +47,7 @@ const Projects = ({ siteThemeState, ...props }) => {
 
   return (
     <>
-      <DefaultWrapper id={`projects`} className={`debug-border`}>
+      <DefaultWrapper id={`projects`}>
         <SectionTitle>Projects</SectionTitle>
         <CardContainer>{githubCards}</CardContainer>
       </DefaultWrapper>

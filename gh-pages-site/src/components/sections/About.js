@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import "../../css/styles.css";
+import ProfileImage from "../../images/Sephta_Profile-export.png";
 
 import { DefaultWrapper } from "../common/commonStyles";
 
@@ -22,9 +23,13 @@ const About = ({ siteThemeState, ...props }) => {
           // className={`styles-dark-box-shadow`}
           style={ContentStyles}
         >
-          <img src="" alt="" width="100px" height="auto" />
+          <LeftContentWrapper>
+            <Img src={ProfileImage} alt="" />
+          </LeftContentWrapper>
         </DefaultWrapper>
-        <DefaultWrapper style={ContentStyles}>Content</DefaultWrapper>
+        <DefaultWrapper style={ContentStyles}>
+          <RightContentWrapper>Content</RightContentWrapper>
+        </DefaultWrapper>
       </Wrapper>
     </>
   );
@@ -40,4 +45,15 @@ const Wrapper = styled.div`
   width: auto;
   padding: 1em;
   min-height: 100px;
+`;
+
+const LeftContentWrapper = styled.div``;
+const RightContentWrapper = styled.div``;
+
+const Img = styled.img`
+  width: 10em;
+  height: auto;
+
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px #121212;
 `;
