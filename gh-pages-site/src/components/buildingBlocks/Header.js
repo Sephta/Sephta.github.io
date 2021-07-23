@@ -8,6 +8,7 @@ import SunIcon from "../../images/sun.svg";
 import MoonIcon from "../../images/moon.svg";
 import { BackgroundColor } from "gatsby-cli/node_modules/chalk";
 
+import ProfileImage from "../../images/stal_self_pixel.png";
 import "../../css/styles.css";
 
 const Header = ({ useTailwind, siteThemeState, ...props }) => {
@@ -88,6 +89,8 @@ const Header = ({ useTailwind, siteThemeState, ...props }) => {
             {/* PUT NAME and Maybe logo here */}
             <SiteHeaderTitle>Seth Tal</SiteHeaderTitle>
 
+            <Img src={ProfileImage} alt="Pixel art representation of myself" />
+
             <ThemeSwitchButton
               id={"theme-switch-button"}
               className={"noTextHighlight styles-default-hover"}
@@ -146,6 +149,8 @@ const HeaderWrapper = styled.div`
   flex-wrap: wrap;
 
   scroll-behavior: smooth;
+
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
 `;
 
 const SiteHeaderTitle = styled.h1`
@@ -211,4 +216,15 @@ const NavItem = styled.a`
         ? css`var(--background-dark)`
         : css`var(--background-light)`};
   }
+`;
+
+const Img = styled.img`
+  width: 5em;
+  height: auto;
+
+  /* border: 2px solid #ededed; */
+  border-radius: 50%;
+  /* box-shadow: 0px 50px 50px rgba(18, 18, 18, 0.255); */
+
+  /* transform: translateY(-100px); */
 `;
